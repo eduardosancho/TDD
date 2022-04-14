@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # hello
 class Solver
   def factorial(num)
@@ -11,7 +9,7 @@ class Solver
   end
 
   def reverse_str(str)
-    str.split('').reverse.join('')
+    str.chars.reverse.join
   end
 
   def fizzbuz(num)
