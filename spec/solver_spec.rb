@@ -24,4 +24,14 @@ describe 'Solver' do
       expect { solver3.factorial(-5) }.to raise_exception(Exception)
     end
   end
+
+  context 'Reverse Tests' do
+    it 'the function reverse should reverse the string' do
+      solver4 = Solver.new
+      expect(solver4.reverse_str('hello')).to eq('olleh')
+      expect(solver4.reverse_str('good')).to eq('doog')
+    end
+  end
+
+  
 end
