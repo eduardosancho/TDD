@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../solver'
+require_relative 'spec_helper.rb'
 
 describe 'Solver' do
   context 'Factorial tests' do
