@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'spec_helper.rb'
+require_relative './spec_helper'
 
-describe 'Solver' do
+describe Solver do
   context 'Factorial tests' do
     it 'the function factorial called several times by recursion' do
       solver1 = Solver.new
@@ -24,15 +24,9 @@ describe 'Solver' do
       expect { solver3.factorial(-5) }.to raise_exception(Exception)
     end
   end
+end
 
-  context 'Reverse Tests' do
-    it 'the function reverse should reverse the string' do
-      solver4 = Solver.new
-      expect(solver4.reverse_str('hello')).to eq('olleh')
-      expect(solver4.reverse_str('good')).to eq('doog')
-    end
-  end
-
+describe Solver do
   context 'Test Fizzbuzz algorithm' do
     it 'the function returns fizzbuzz if the number is divisble by 3 and 5' do
       solver5 = Solver.new
@@ -52,12 +46,20 @@ describe 'Solver' do
       expect(solver7.fizzbuz(25)).to eq('buzz')
     end
 
-    
     it 'the function returns the number if not divisvle by 3 or 5' do
       solver8 = Solver.new
       expect(solver8.fizzbuz(8)).to eq('8')
       expect(solver8.fizzbuz(19)).to eq('19')
     end
   end
+end
 
+describe Solver do
+  context 'Reverse Tests' do
+    it 'the function reverse should reverse the string' do
+      solver4 = Solver.new
+      expect(solver4.reverse_str('hello')).to eq('olleh')
+      expect(solver4.reverse_str('good')).to eq('doog')
+    end
+  end
 end
