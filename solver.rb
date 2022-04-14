@@ -6,4 +6,8 @@ class Solver
 
     n * factorial(n - 1)
   end
+
+  def reverse_str(str)
+     str.split('').reverse.join('')
+  end
 end
