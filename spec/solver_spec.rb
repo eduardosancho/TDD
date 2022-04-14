@@ -1,21 +1,18 @@
 # frozen_string_literal: true
 
-class Outer
-  def initialize(processor)
-    @processor = processor
-  end
-  
-  def factorial(number)
+class Solver
+  def factorial
+    number * 2
   end
 end
 
 describe 'Outer' do
 
   it 'the factorial method should work correctly' do
-    mock = double('solver')
-    expect(mock).to receive(:factorial).with(6)
+    solver1 = Solver.new
 
-    result = Outer.new(mock)
-    result.factorial(6)
+    allow(solver1).to receive(:number).and_return(3)
+
+    expect(solver1.factorial).to eql(6)
   end
 end
